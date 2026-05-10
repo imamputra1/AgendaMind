@@ -10,8 +10,9 @@ RUN groupadd --gid 1000 agentuser && \
     useradd --uid 1000 --gid agentuser --shell /bin/bash --create-home agentuser
 
 COPY --from=ghcr.io/astral-sh/uv:latest /uv /usr/local/bin/uv
+COPY --from=ghcr.io/astral-sh/uv:latest /uvx /usr/local/bin/uvx
 
-WORKDIR \app
+WORKDIR /app
 
 RUN mkdir -p /app/quarantine && \
     chown -R agentuser:agentuser /app
