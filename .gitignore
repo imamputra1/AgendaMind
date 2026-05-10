@@ -3,7 +3,8 @@
 __pycache__/
 *.pyc
 uv.lock
-test/
+tests/
 config.yaml/
 run.fish/
 setup_dc.fish/
+logs/

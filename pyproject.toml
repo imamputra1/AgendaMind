@@ -5,7 +5,48 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "aiohttp>=3.13.5",
     "icalendar>=7.1.0",
     "openclaw>=2026.3.20",
     "python-telegram-bot>=22.7",
+    "pyyaml",
 ]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.3",
+    "pytest-asyncio>=1.3.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = [
+    "core",
+    "core.llm_gateway",
+    "core.swarm_orchestrator",
+    "features",
+    "features.executive_secretary",
+    "features.document_controller",
+    "features.content_manager",
+    "interfaces",
+    "interfaces.obsidian_hub",
+    "interfaces.telegram_node",
+    "interfaces.calendar_adapter",
+    "memory_lab",
+    "memory_lab.graph_db",
+    "memory_lab.viral_patterns",
+    "utils",
+]
+
+# pyproject.toml (append under [tool.pytest.ini_options])
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+pythonpath = ["."]
+log_cli = true
+log_cli_level = "INFO"
+log_cli_format = "%(asctime)s | %(levelname)-8s | %(name)s | %(message)s"
+log_cli_date_format = "%Y-%m-%d %H:%M:%S"
