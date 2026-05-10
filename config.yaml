@@ -1,0 +1,21 @@
+llm:
+  provider: "kimi"
+  model: "kimi-k2-5"
+  base_url: "https://api.moonshot.cn/v1"
+  timeout: 30
+  max_retries: 3
+
+paths:
+  obsidian_vault: "/app/obsidian_hub"
+  sandbox: "/app/sandbox"
+  quarantine: "/app/quarantine"
+  prompts: "app/prompts"
+  memory_lab: "app/memory_lab"
+
+treshold:
+  schedule_priority_default: 3
+  document_sync_interval_seconds: 300
+
+event_bus:
+  queue_max_size: 1000
+

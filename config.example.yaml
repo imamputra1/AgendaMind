@@ -1,0 +1,21 @@
+llm:
+  provider: "YOUR_VALUE_HERE"
+  model: "YOUR_VALUE_HERE"
+  base_url: "YOUR_VALUE_HERE"
+  timeout: "YOUR_VALUE_HERE"
+  max_retries: "YOUR_VALUE_HERE"
+
+paths:
+  obsidian_vault: "YOUR_VALUE_HERE"
+  sandbox: "YOUR_VALUE_HERE"
+  quarantine: "YOUR_VALUE_HERE"
+  prompts: "YOUR_VALUE_HERE"
+  memory_lab: "YOUR_VALUE_HERE"
+
+treshold:
+  schedule_priority_default: "YOUR_VALUE_HERE"
+  document_sync_interval_seconds: "YOUR_VALUE_HERE"
+
+event_bus:
+  queue_max_size: "YOUR_VALUE_HERE"
+
